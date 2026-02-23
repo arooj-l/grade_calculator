@@ -10,7 +10,7 @@ while True:
     if user_input == "done":
         break
 
-    marks.append(user_input)
+    marks.append(float(user_input))
 #test to see if list contains all teh element
 #print(marks)
 
