@@ -25,6 +25,16 @@ else:
     print("Total: ", total)
     average = total/len(marks)
     print("Average: ", average)
-
-
+    #assign grade
+    if average >= 90:
+        grade = "A" 
+    elif average >= 80:
+        grade = 'B'
+    elif average >= 70:
+        grade = "C"
+    elif average >= 60:
+        grade = "D"
+    else:
+        grade = "F"
+    print("Grade: ", grade)
 
