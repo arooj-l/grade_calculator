@@ -6,10 +6,10 @@ marks = []
 #loop to add marks into the list until user enter done
 while True:
     user_input = input("Enter mark or type done: ")
-#Error Handling, if the user types any string (abc ...)
-    if user_input.lower() == "done": #if user enter upper case
-        break
-    
+#if user wants to stop
+    if user_input.lower() == "done": 
+        break 
+#try converting input to number
     try:
         mark = float(user_input)
         marks.append(mark)
@@ -17,11 +17,14 @@ while True:
         print("Invalid input. Please enter a number.")
 
    
-#test to see if list contains all teh element
-#print(marks)
+#after loop ends
+if not marks:
+    print("No marks were entered.")
+else:
+    total = sum(marks)
+    print("Total: ", total)
+    average = total/len(marks)
+    print("Average: ", average)
 
-total = sum(marks)
-
-print(total)
 
 
